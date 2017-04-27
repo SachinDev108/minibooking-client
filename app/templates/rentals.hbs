@@ -1,0 +1,23 @@
+<h3>Rentals Index</h3>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>NAME</th>
+      <th>DAILY RATES</th>
+      <th>ACTIONS</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model as |rental|}}
+      <tr>
+        <td>{{rental.id}}</td>
+        <td>{{rental.name}}</td>
+        <td>{{rental.daily_rates}}</td>
+        <td><button {{action 'show' rental}}>Show</button></td>
+        <td><button {{action 'delete' rental}}>Delete</button></td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>  
+{{#link-to 'rental.new'}}New Rental{{/link-to}}
