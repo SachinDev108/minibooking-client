@@ -17,7 +17,8 @@
   <br/>
   <div>
     <label>Price:</label>
-    {{input type="text" value=model.price}}
+    {{input type="text" value=model.price readonly='true' id='booking_price'}}
+    <button {{action 'calculatePrice' modal}}>Calculate Price</button>
   </div>
   <br/>
   <div>
