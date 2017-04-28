@@ -1,1 +1,27 @@
 <h3>Booking New</h3>
+<form>
+  <div>
+    <label>Start At:</label>
+    {{date-picker date=date value=model.start_at valueFormat='YYYY-MM-DD' id="EndDate"}}
+  </div>
+  <br/>
+  <div>
+    <label>End At:</label>
+    {{date-picker date=date value=model.end_at valueFormat='YYYY-MM-DD'}}
+  </div>
+  <br/>
+  <div>
+    <label>Client Email:</label>
+    {{input type="text" value=model.client_email}}
+  </div>
+  <br/>
+  <div>
+    <label>Price:</label>
+    {{input type="text" value=model.price}}
+  </div>
+  <br/>
+  <div>
+    <button {{action 'save'}}>Save</button>
+    <button {{action 'cancel'}}>Cancel</button>
+  </div>
+</form>

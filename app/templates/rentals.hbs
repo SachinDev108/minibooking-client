@@ -15,6 +15,7 @@
         <td>{{rental.name}}</td>
         <td>{{rental.daily_rates}}</td>
         <td><button {{action 'show' rental}}>Show</button></td>
+        <td><button>{{#link-to 'rental.edit' rental}}Edit{{/link-to}}</button></td>
         <td><button {{action 'delete' rental}}>Delete</button></td>
       </tr>
     {{/each}}
