@@ -1,0 +1,27 @@
+<h3>Booking Index</h3>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Start At</th>
+      <th>End At</th>
+      <th>Client Email</th>
+      <th>Price</th>
+      <th>ACTIONS</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model as |booking|}}
+      <tr>
+        <td>{{booking.id}}</td>
+        <td>{{booking.start_at}}</td>
+        <td>{{booking.end_at}}</td>
+        <td>{{booking.client_email}}</td>
+        <td>{{booking.price}}</td>
+        <td><button>{{#link-to 'rental.booking.edit' booking }}Edit{{/link-to}}</button></td>
+        <td><button {{action 'delete' booking}}>Delete</button></td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>  
+{{#link-to 'rental.booking.new'}}New booking{{/link-to}}

@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model: function(params) {return this.store.find('rental', params.rental_id);},
+	model: function(params) {return this.store.find('booking', params.booking_id);},
   actions: {
     save: function() {  
       var self = this;
@@ -17,3 +17,9 @@ export default Ember.Route.extend({
     }
   }
 });
+
+
+
+
+
+

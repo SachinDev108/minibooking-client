@@ -2,15 +2,4 @@
 <h3>Rental Show</h3>
 <h2>{{model.name}}</h2>
 <p>{{model.daily_rates}}</p>
-<div>
-  <strong>Bookings( {{model.bookings.length}} ):</strong>
-  {{#each model.bookings as |booking|}}
-    <div>
-      <p>{{booking.start_at}}</p>
-      <p>{{booking.end_at}}</p>
-      <p>{{booking.client_email}}</p>
-      <p>{{booking.price}}</p>
-    </div>
-  {{/each}}
-</div>
 <div>{{#link-to 'rental.booking.new'}}New Booking{{/link-to}}</div>

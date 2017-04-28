@@ -13,11 +13,11 @@ export default Ember.Route.extend({
       const newBooking = this.get('store').createRecord('booking', this.currentModel);
       newBooking.set('rental', rental);
       newBooking.save().then(() => {
-        this.transitionTo('rental', rental);
+        this.transitionTo('rentals');
       });
     },
     cancel() {
-      this.transitionTo('rental', this.modelFor('rental'));
+      this.transitionTo('rentals');
     }
   }
 });
